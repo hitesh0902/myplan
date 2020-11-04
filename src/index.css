@@ -29,3 +29,13 @@ input[type="email"]:not(.browser-default):focus:not([readonly]) + label,
 input[type="password"]:not(.browser-default):focus:not([readonly]) + label {
   color: #ec407a !important;
 }
+
+.show-small {
+  display: none !important;
+}
+
+@media (min-width: 600px) {
+  .show-small {
+    display: block !important;
+  }
+}
