@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
+import moment from "moment";
 
 const Notifications = (props) => {
   const { projects } = props;
@@ -9,17 +10,20 @@ const Notifications = (props) => {
   return (
     <div style={{ marginTop: 30 }}>
       <h5>Notifications</h5>
-      <div style={{ padding: 1 }} className="z-depth-0">
+      <div style={{ padding: 1 }} className="card z-depth-0">
         {projects &&
           projects.map((project) => (
             <div key={project.id} className="pink-text">
               <blockquote>
                 {`${project.authorFirstName} ${project.authorLastName}`}
-                <span
-                  style={{ paddingLeft: 10 }}
-                  className="grey-text text-darken-2"
-                >
-                  added a new project.
+                <span className="grey-text text-darken-2">
+                  {" "}
+                  added a new project{" "}
+                </span>
+                <span className="grey-text text-darken-1">
+                  (
+                  {moment(project.createdAt.toDate()).startOf("hour").fromNow()}
+                  ).
                 </span>
               </blockquote>
             </div>

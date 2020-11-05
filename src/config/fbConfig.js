@@ -11,13 +11,6 @@ var firebaseConfig = {
   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  // apiKey: "AIzaSyDDcwCjK-GRjOSUd8B3w5N2YpKVJ57pHKA",
-  // authDomain: "plan-app-a6065.firebaseapp.com",
-  // databaseURL: "https://plan-app-a6065.firebaseio.com",
-  // projectId: "plan-app-a6065",
-  // storageBucket: "plan-app-a6065.appspot.com",
-  // messagingSenderId: "764700026508",
-  // appId: "1:764700026508:web:7bd2913fffa1c9fd877da9",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
